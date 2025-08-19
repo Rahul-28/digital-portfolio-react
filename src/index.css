@@ -43,6 +43,13 @@ body {
     color: transparent;
 }
 
+@utility hilight-text-gradient {
+    background: linear-gradient(to bottom, #e7d393, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 @utility radial-gradient {
     background: radial-gradient(
             circle at center,
@@ -84,15 +91,11 @@ body {
         }
     }
 
-    .noisy {
-        @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
-    }
-
     #hero {
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
         h1 {
-            @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-bebas-neue;
+            @apply md:mt-32 mt-40 text-8xl md:text-[17vw] leading-none text-center font-bebas-neue;
         }
 
         .left-leaf {
@@ -117,7 +120,7 @@ body {
                     @apply 2xl:text-start text-center;
                 }
 
-                .view-cocktails {
+                .about-section {
                     @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full;
 
                     p {
