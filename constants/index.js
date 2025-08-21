@@ -4,8 +4,8 @@ const navLinks = [
         title: "About",
     },
     {
-        id: "projects",
-        title: "Projects"
+        id: "experience",
+        title: "Experience"
     },
     {
         id: "contact",
@@ -69,8 +69,54 @@ const technologyImages = [
   },
 ];
 
+const experiences = [
+  {
+    title: 'Junior Frontend Developer',
+    company: 'Nowri Technologies',
+    duration: 'Jan 2024 - July 2024',
+    locationType: 'Remote',
+  },
+  {
+    title: 'Open Source Contributor',
+    company: 'Ionic',
+    duration: 'March 2024',
+    locationType: 'Remote',
+  },  
+  {
+    title: 'Assistant System Engineer',
+    company: 'Tata Consultancy Services',
+    duration: 'May 2025 - Present',
+    locationType: 'Onsite',
+  },
+]
+const gmail = "rahulrajeshrr365@gmail.com"
+
+const socials = [
+{
+    name: "Github",
+    icon: "/images/github.svg",
+    url: "https://github.com/Rahul-28",
+    className: 'w-10 h-10 hover:scale-110 transition-transform duration-300 ease-in-out'
+},
+{
+    name: "Gmail",
+    icon: "/images/gmail.svg",
+    url: `mailto:${gmail}`,
+    className: 'w-10 h-10 hover:scale-110 transition-transform duration-300 ease-in-out'
+},
+{
+    name: "Linkedin",
+    icon: "/images/linkedin.svg",
+    url: "https://www.linkedin.com/in/dev-rahulrajesh/",
+    className: 'w-15 h-15 hover:scale-110 transition-transform duration-300 ease-in-out'
+},
+];
+
 
 export {
     navLinks,
     technologyImages,
+    experiences,
+    socials,
+    gmail,
 }
