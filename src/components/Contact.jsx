@@ -25,6 +25,12 @@ const Contact = () => {
         .from('#socials', {
 			opacity: 0, yPercent: 20, stagger: 0.01
 	 })
+
+	 gsap.from('#spin', {
+		rotate: -360,
+		repeat: -1,
+		duration: 7
+	 })
 	})
  
  return (
@@ -56,7 +62,12 @@ const Contact = () => {
 			))}
 		 </div>
 		</div>
-	 </div>
+	 
+	</div>
+
+	   	<div className="w-full text-center mt-6 whitespace-nowrap">
+			<span>Crafted with ♥️ using {"  	"}<img src="/images/react.svg" className='w-5 h-5 inline-block' id='spin' /></span>
+	    </div>
 	</footer>
  )
 }
