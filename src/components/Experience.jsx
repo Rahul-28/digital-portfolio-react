@@ -20,7 +20,7 @@ const Experience = () => {
             }
         })
         timeline
-            .to('.fade-text', { opacity: 0, stagger: 0.2, ease: 'power1.inOut', })
+            .to('.fade-text', { opacity: 0, stagger: 0.2, ease: 'power1.inOut' })
             .to('.exp-card', { scale: 1.3, duration: 0.8, ease: 'ease.inOut '})
     })
 
@@ -35,7 +35,7 @@ const Experience = () => {
                             <li key={idx}>
                                 <div className="exp-card">
                                     <span className="text-xs text-gray-400 font-semibold uppercase tracking-wider">{duration}</span>
-                                    <h3 className="text-lg font-bold text-blue-600">{title}</h3>
+                                    <h3 className="text-lg font-bold text-yellow">{title}</h3>
                                     <p className="text-gray-800 font-medium">{company}</p>
                                     <p className="text-xs text-gray-500">{locationType}</p>
                                 </div>

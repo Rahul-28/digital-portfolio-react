@@ -84,7 +84,7 @@ const experiences = [
   },  
   {
     title: 'Assistant System Engineer',
-    company: 'Tata Consultancy Services',
+    company: 'TATA Consultancy Services',
     duration: 'May 2025 - Present',
     locationType: 'Onsite',
   },
