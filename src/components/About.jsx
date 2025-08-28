@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { technologyImages } from "../../constants";
+import { resumeLink, technologyImages } from "../../constants";
 import { SplitText } from "gsap/all";
 
 const About = () => {
@@ -71,8 +71,8 @@ const About = () => {
             <div className="mb-16 md:px-0 px-5">
                 <div className="content">
                     <div className="md:col-span-8">
-                        <a href="#about" className="badge">About Me</a>
-                        <h2 c>
+                        <a href={resumeLink} className="badge" target="_blank">My Resume</a>
+                        <h2>
                             Passion for creativity -
                             driven by curiosity
                         </h2>

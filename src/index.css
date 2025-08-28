@@ -150,7 +150,7 @@ body {
         .carousel {
             @apply flex bg-linear-to-br from-[#e7d393] to-[#898989] overflow-hidden cursor-pointer;
 
-            > div {
+            div {
                 @apply flex;
             }
 
@@ -167,15 +167,68 @@ body {
             @apply relative md:text-[20vw] text-6xl md:text-8xl text-nowrap leading-none font-bebas-neue text-center text-[#505050] mb-8;
         }
 
+        .company-tabs {
+            @apply grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
+
+            button {
+                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-bebas-neue;
+            }
+        }
+
         .content {
-            @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10;
+            @apply flex flex-col justify-between items-center container mx-auto relative;
+
+            .arrows {
+                @apply flex items-center justify-between w-full absolute;
+
+                button {
+                    @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
+
+                    span {
+                        @apply text-3xl font-bebas-neue leading-none hidden md:block;
+                    }
+                }
+            }
+        }
+
+        .cocktail {
+            @apply flex-center mt-10;
+
+            img {
+                @apply object-contain h-[60vh];
+            }
+        }
+
+        .duration {
+            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full lg:absolute bottom-0;
+
+            .info {
+                @apply space-y-4 lg:translate-y-20;
+
+                #title {
+                    @apply font-bebas-neue md:text-4xl text-xl text-yellow max-w-60;
+                }
+            }
+
+            .details {
+                @apply space-y-5 md:max-w-md text-left;
+
+                h2 {
+                    @apply md:text-4xl text-xl font-serif;
+                }
+
+                p {
+                    @apply md:text-lg pe-5;
+                }
+            }
         }
 
         .exp-card {
-             @apply bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-5 flex flex-col items-start min-h-[70px] max-w-xl md:my-10
+             @apply rounded-xl shadow-lg border border-gray-100 p-3 md:p-10 flex flex-col items-start min-h-[100px] max-w-xl md:my-10
         }
     }
 
+ 
     #contact {
         @apply relative md:mt-20 mt-0 px-4 text-center w-full overflow-hidden radial-gradient;
 

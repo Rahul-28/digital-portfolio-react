@@ -11,7 +11,7 @@ const navLinks = [
         id: "contact",
         title: "Contact",
     }
-]
+];
 
 const technologyImages = [
   {
@@ -69,54 +69,63 @@ const technologyImages = [
   },
 ];
 
-const experiences = [
+const allExperiences = [
   {
+    id: 1,
     title: 'Junior Frontend Developer',
-    company: 'Nowri Technologies',
+    companyName: 'Nowri Technologies',
     duration: 'Jan 2024 - July 2024',
     locationType: 'Remote',
+    description: 'Built responsive web apps using Angular and TypeScript, with Tailwind CSS for fast, modern UI styling. '
   },
   {
+    id: 2,
     title: 'Open Source Contributor',
-    company: 'Ionic',
+    companyName: 'Ionic',
     duration: 'March 2024',
     locationType: 'Remote',
+    description: 'Contributed to Ionic, an open-source project by writing code, fixing bugs, and adding tests, thus improving reliability.'
   },  
   {
+    id: 3,
     title: 'Assistant System Engineer',
-    company: 'TATA Consultancy Services',
+    companyName: 'TATA Consultancy Services',
     duration: 'May 2025 - Present',
     locationType: 'Onsite',
+    description: 'Currently working as an Assistant System Engineer at TCS, also focusing on full-stack development and devops'
   },
-]
-const gmail = "rahulrajeshrr365@gmail.com"
+];
+
+const gmail = "rahulrajeshrr365@gmail.com";
+const resumeLink = "https://ugc.production.linktr.ee/01f59c4b-0bb7-477b-af2b-1edac0585b1b_rahul-resume-v1.pdf";
 
 const socials = [
-{
-    name: "Github",
-    icon: "/images/github.svg",
-    url: "https://github.com/Rahul-28",
-    className: 'w-10 h-10 hover:scale-110 transition-transform duration-300 ease-in-out'
-},
-{
-    name: "Gmail",
-    icon: "/images/gmail.svg",
-    url: `mailto:${gmail}`,
-    className: 'w-10 h-10 hover:scale-110 transition-transform duration-300 ease-in-out'
-},
-{
-    name: "Linkedin",
-    icon: "/images/linkedin.svg",
-    url: "https://www.linkedin.com/in/dev-rahulrajesh/",
-    className: 'w-15 h-15 hover:scale-110 transition-transform duration-300 ease-in-out'
-},
+  {
+      name: "Github",
+      icon: "/images/github.svg",
+      url: "https://github.com/Rahul-28",
+      className: 'w-10 h-10 hover:scale-110 transition-transform duration-300 ease-in-out'
+  },
+  {
+      name: "Gmail",
+      icon: "/images/gmail.svg",
+      url: `mailto:${gmail}`,
+      className: 'w-10 h-10 hover:scale-110 transition-transform duration-300 ease-in-out'
+  },
+  {
+      name: "Linkedin",
+      icon: "/images/linkedin.svg",
+      url: "https://www.linkedin.com/in/dev-rahulrajesh/",
+      className: 'w-15 h-15 hover:scale-110 transition-transform duration-300 ease-in-out'
+  },
 ];
 
 
 export {
     navLinks,
     technologyImages,
-    experiences,
+    allExperiences,
     socials,
     gmail,
+    resumeLink,
 }
