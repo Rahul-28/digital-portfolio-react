@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { resumeLink, technologyImages } from "../../constants";
+import { fullName, resumeLink, technologyImages } from "../../constants";
 import { SplitText } from "gsap/all";
 
 const About = () => {
@@ -79,7 +79,7 @@ const About = () => {
                     </div>
                     <div className="sub-content">
                         <p className="about-content-1">
-                            Hi! I’m Rahul Rajesh, a dedicated web developer with a keen eye for design and a passion for 
+                            Hi! I’m {fullName}, a dedicated web developer with a keen eye for design and a passion for 
                             building intuitive, accessible digital experiences. Having worked on projects 
                             across multiple domains, I thrive on transforming ideas into polished, 
                             user-friendly realities.

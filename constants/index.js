@@ -120,6 +120,8 @@ const socials = [
   },
 ];
 
+const firstName = "Rahul"
+const fullName = "Rahul Rajesh"
 
 export {
     navLinks,
@@ -128,4 +130,6 @@ export {
     socials,
     gmail,
     resumeLink,
+    firstName,
+    fullName
 }

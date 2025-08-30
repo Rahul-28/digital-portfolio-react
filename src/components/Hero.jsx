@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import React from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { firstName } from "../../constants";
 
 const Hero = () => {
 
@@ -58,7 +59,7 @@ const Hero = () => {
 			
 			<div className="about-section">
 			 <p className="subtitle">
-                I'm Rahul, a passionate Developer with a knack for creating stunning digital experiences.
+                I'm {firstName}, a passionate Developer with a knack for creating stunning digital experiences.
 			 </p>
 
              <span className="flex animate-bounce mt-5">

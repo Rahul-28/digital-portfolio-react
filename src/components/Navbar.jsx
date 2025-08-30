@@ -1,5 +1,5 @@
 import React from "react";
-import { navLinks } from "../../constants";
+import { fullName, navLinks } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav>
         <div>
             <a href="#hero" className="flex items-center gap-2">
-                <p>Rahul Rajesh</p>
+                <p>{fullName}</p>
             </a>
 
             <ul>
