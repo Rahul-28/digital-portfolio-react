@@ -26,7 +26,7 @@ const Experience = () => {
         })
         timeline
             .to('.fade-text', { opacity: 0, stagger: 0.2, ease: 'power1.inOut' })
-            .to('.container', { duration: 1, ease: 'ease.inOut', yPercent: -50}, '<50%')
+            .to('.container', { duration: 1, ease: 'ease.inOut', yPercent: -40}, '<50%')
     })
 
     const totalExperiences = allExperiences.length;
@@ -42,8 +42,6 @@ const Experience = () => {
     }
 
     const currentCompany = getCompanyAt(0);
-    const prevCompany = getCompanyAt(-1);
-    const nextCompany = getCompanyAt(1);
 
     return (
         <section id="experience" aria-labelledby="menu-heading">
@@ -73,20 +71,18 @@ const Experience = () => {
                 <div className="content">
                     <div className="arrows">
                         <button className="text-left" onClick={() => goToSlide(currentIndex - 1)}>
-                            <span>{prevCompany.name}</span>
                             <img src="/images/arrow-left-circle.svg" alt="right-arrow" aria-hidden="true" />
                         </button>
 
-                        <button className="text-left" onClick={() => goToSlide(currentIndex + 1)}>
-                            <span>{nextCompany.name}</span>
+                        <button className="text-right" onClick={() => goToSlide(currentIndex + 1)}>
                             <img src="/images/arrow-right-circle.svg" alt="left-arrow" aria-hidden="true" />
                         </button>
                     </div>
 
                     <div className="exp-card">
-                                <h3 className="text-lg font-bold text-yellow">{currentCompany.title}</h3>
-                                <p className="font-medium">{currentCompany.companyName}</p>
-                                <p className="text-xs">{currentCompany.locationType}</p>
+                            <h3 className="text-lg font-bold text-yellow">{currentCompany.title}</h3>
+                            <p className="font-medium">{currentCompany.companyName}</p>
+                            <p className="text-xs">{currentCompany.locationType}</p>
                     </div>
 
                     <div className="duration">
