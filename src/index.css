@@ -1,239 +1,233 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-    font-family: "BebasNeue";
-    src: url("/fonts/BebasNeue.ttf") format("truetype");
+  font-family: 'BebasNeue';
+  src: url('/fonts/BebasNeue.ttf') format('truetype');
 }
 
 @theme {
-    --color-yellow: #e7d393;
-    --color-white-100: #efefef;
-    --font-sans: "Mona Sans", sans-serif;
-    --font-bebas-neue: "BebasNeue", sans-serif;
-    --font-serif: "DM Serif Text", serif;
+  --color-yellow: #e7d393;
+  --color-white-100: #efefef;
+  --font-sans: 'Mona Sans', sans-serif;
+  --font-bebas-neue: 'BebasNeue', sans-serif;
+  --font-serif: 'DM Serif Text', serif;
 }
 
 html,
 body {
-    width: 100%;
-    background-color: black;
-    color: white;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  width: 100%;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @utility flex-center {
-    @apply flex justify-center items-center;
+  @apply flex justify-center items-center;
 }
 
 @utility text-gradient {
-    background: linear-gradient(to bottom, #ffffff, #898989);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(to bottom, #ffffff, #898989);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @utility hilight-text-gradient {
-    background: linear-gradient(to bottom, #e7d393, #898989);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(to bottom, #e7d393, #898989);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @utility radial-gradient {
-    background: radial-gradient(
-            circle at center,
-            #434343 0%,
-            #000 50%,
-            transparent 100%
-    );
+  background: radial-gradient(circle at center, #434343 0%, #000 50%, transparent 100%);
 }
 
 @layer components {
-    main {
-        @apply w-full overflow-x-hidden;
+  main {
+    @apply w-full overflow-x-hidden;
+  }
+
+  nav {
+    @apply fixed z-50 w-full;
+
+    div {
+      @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
     }
 
-    nav {
-        @apply fixed z-50 w-full;
+    p {
+      @apply font-bebas-neue text-3xl -mb-2;
+    }
+
+    a {
+      @apply cursor-pointer text-nowrap md:text-base text-sm;
+    }
+
+    ul {
+      @apply flex-center lg:gap-12 gap-7;
+    }
+  }
+
+  #hero {
+    @apply relative z-10 min-h-dvh w-full border border-transparent;
+
+    h1 {
+      @apply md:mt-32 mt-40 text-8xl md:text-[17vw] leading-none text-center font-bebas-neue;
+    }
+
+    .body {
+      @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5;
+
+      .content {
+        @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
+
+        p:nth-of-type(2) {
+          @apply font-bebas-neue text-6xl text-yellow max-w-xl;
+        }
+
+        p:last-of-type {
+          @apply 2xl:text-start text-center;
+        }
+
+        .about-section {
+          @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full;
+
+          p {
+            @apply text-left;
+          }
+
+          a {
+            @apply font-semibold opacity-80 2xl:text-start text-center hover:text-yellow;
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
+
+    .content {
+      @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
+
+      h2 {
+        @apply text-5xl md:text-6xl font-bebas-neue max-w-lg;
+      }
+
+      .sub-content {
+        @apply md:col-span-4 space-y-5 flex flex-col justify-between border-[#e7d393] border-l-4 pl-5;
+
+        p {
+          @apply text-lg;
+        }
 
         div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+          @apply flex flex-col justify-between md:gap-2 gap-5;
+
+          span {
+            @apply text-yellow font-bold text-5xl;
+          }
+        }
+      }
+    }
+
+    .badge {
+      @apply inline-block rounded-full bg-[#e7d393] text-black px-4 py-2 text-sm font-medium mb-8;
+    }
+
+    h1 {
+      @apply text-4xl md:text-5xl font-bebas-neue text-center mb-10 text-white mt-32;
+    }
+
+    .carousel {
+      @apply flex bg-linear-to-br from-[#e7d393] to-[#898989] overflow-hidden cursor-pointer;
+
+      div {
+        @apply flex;
+      }
+
+      img {
+        @apply object-cover w-full h-full;
+      }
+    }
+  }
+
+  #experience {
+    @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
+
+    h2 {
+      @apply relative md:text-[20vw] text-6xl md:text-8xl text-nowrap leading-none font-bebas-neue text-center text-[#505050] mb-8;
+    }
+
+    .company-tabs {
+      @apply grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
+
+      button {
+        @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-bebas-neue;
+      }
+    }
+
+    .content {
+      @apply flex flex-col justify-between items-center container mx-auto relative;
+
+      .arrows {
+        @apply flex items-center justify-between w-full absolute;
+
+        button {
+          @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
+        }
+      }
+    }
+
+    .duration {
+      @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full  bottom-0;
+
+      .info {
+        @apply space-y-4 lg:translate-y-20;
+
+        #title {
+          @apply font-bebas-neue md:text-4xl text-xl text-yellow max-w-60;
+        }
+      }
+
+      .details {
+        @apply space-y-5 md:max-w-md text-left;
+
+        h2 {
+          @apply md:text-4xl text-xl font-serif;
         }
 
         p {
-            @apply font-bebas-neue text-3xl -mb-2;
+          @apply md:text-lg pe-5;
         }
-
-        a {
-            @apply cursor-pointer text-nowrap md:text-base text-sm;
-        }
-
-        ul {
-            @apply flex-center lg:gap-12 gap-7;
-        }
+      }
     }
 
-    #hero {
-        @apply relative z-10 min-h-dvh w-full border border-transparent;
-
-        h1 {
-            @apply md:mt-32 mt-40 text-8xl md:text-[17vw] leading-none text-center font-bebas-neue;
-        }
-
-        .body {
-            @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5;
-
-            .content {
-                @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
-
-                p:nth-of-type(2) {
-                    @apply font-bebas-neue text-6xl text-yellow max-w-xl;
-                }
-
-                p:last-of-type {
-                    @apply 2xl:text-start text-center;
-                }
-
-                .about-section {
-                    @apply space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full;
-
-                    p {
-                        @apply text-left;
-                    }
-
-                    a {
-                        @apply font-semibold opacity-80 2xl:text-start text-center hover:text-yellow;
-                    }
-                }
-            }
-        }
+    .exp-card {
+      @apply rounded-xl shadow-lg border border-gray-100 p-3 md:p-10 flex flex-col items-start min-h-[100px] max-w-xl md:my-10;
     }
+  }
 
-    #about {
-        @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
+  #contact {
+    @apply relative md:mt-20 mt-0 px-4 text-center w-full overflow-hidden radial-gradient;
 
-        .content {
-            @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
+    .content {
+      @apply container mx-auto lg:py-14 2xl:py-32 py-16 flex flex-col justify-between gap-10 min-h-dvh;
 
-            h2 {
-                @apply text-5xl md:text-6xl font-bebas-neue max-w-lg;
-            }
+      h2 {
+        @apply lg:text-6xl 2xl:text-8xl text-5xl font-bebas-neue md:translate-y-0 translate-y-5;
+      }
 
-            .sub-content {
-                @apply md:col-span-4 space-y-5 flex flex-col justify-between border-[#e7d393] border-l-4 pl-5;
+      h3 {
+        @apply uppercase xl:text-base 2xl:text-lg text-base mb-2;
+      }
 
-                p {
-                    @apply text-lg;
-                }
-
-                div {
-                    @apply flex flex-col justify-between md:gap-2 gap-5;
-
-                    span {
-                        @apply text-yellow font-bold text-5xl;
-                    }
-                }
-            }
-        }
-
-        .badge {
-            @apply inline-block rounded-full bg-[#e7d393] text-black px-4 py-2 text-sm font-medium mb-8;
-        }
-
-        h1 {
-            @apply text-4xl md:text-5xl font-bebas-neue text-center mb-10 text-white mt-32;
-        }
-
-        .carousel {
-            @apply flex bg-linear-to-br from-[#e7d393] to-[#898989] overflow-hidden cursor-pointer;
-
-            div {
-                @apply flex;
-            }
-
-            img {
-                @apply object-cover w-full h-full;
-            }
-        }
+      p {
+        @apply lg:text-2xl 2xl:text-3xl text-sm;
+      }
     }
-
-    #experience {
-        @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
-
-        h2 {
-            @apply relative md:text-[20vw] text-6xl md:text-8xl text-nowrap leading-none font-bebas-neue text-center text-[#505050] mb-8;
-        }
-
-        .company-tabs {
-            @apply grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
-
-            button {
-                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-bebas-neue;
-            }
-        }
-
-        .content {
-            @apply flex flex-col justify-between items-center container mx-auto relative;
-
-            .arrows {
-                @apply flex items-center justify-between w-full absolute;
-
-                button {
-                    @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
-                }
-            }
-        }
-
-        .duration {
-            @apply flex max-md:flex-col gap-10 md:items-center justify-between w-full  bottom-0;
-
-            .info {
-                @apply space-y-4 lg:translate-y-20;
-
-                #title {
-                    @apply font-bebas-neue md:text-4xl text-xl text-yellow max-w-60;
-                }
-            }
-
-            .details {
-                @apply space-y-5 md:max-w-md text-left;
-
-                h2 {
-                    @apply md:text-4xl text-xl font-serif;
-                }
-
-                p {
-                    @apply md:text-lg pe-5;
-                }
-            }
-        }
-
-        .exp-card {
-             @apply rounded-xl shadow-lg border border-gray-100 p-3 md:p-10 flex flex-col items-start min-h-[100px] max-w-xl md:my-10
-        }
-    }
-
- 
-    #contact {
-        @apply relative md:mt-20 mt-0 px-4 text-center w-full overflow-hidden radial-gradient;
-
-        .content {
-            @apply container mx-auto lg:py-14 2xl:py-32 py-16 flex flex-col justify-between gap-10 min-h-dvh;
-
-            h2 {
-                @apply lg:text-6xl 2xl:text-8xl text-5xl font-bebas-neue md:translate-y-0 translate-y-5;
-            }
-
-            h3 {
-                @apply uppercase xl:text-base 2xl:text-lg text-base mb-2;
-            }
-
-            p {
-                @apply lg:text-2xl 2xl:text-3xl text-sm;
-            }
-        }
-    }
+  }
 }
